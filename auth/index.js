@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // middleware
 
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: TRUE }))
 app.use(session({
   resave: false,
   saveUninitialized: false,
@@ -89,7 +89,7 @@ app.post('/login', function (req, res, next) {
         res.redirect('back');
       });
     } else {
-      req.session.error = '비밀번호가 틀렸습니다. '
+      req.session.error = '비밀번호가 틀렸습니다. 다시해봐라~ '
         + ' (use "tj" and "foobar")';
       res.redirect('/login');
     }
