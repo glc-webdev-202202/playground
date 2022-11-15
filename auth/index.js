@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: TRUE }))
 app.use(session({
   resave: false,
   saveUninitialized: false,
-  secret: 'asdf!@#$qwer'
+  secret: 'A Secret! Keep it Secret!'
 }));
 
 // Session-persisted message middleware
@@ -40,7 +40,7 @@ app.use(function(req, res, next){
 // dummy database
 
 var users = {
-  tj: { name: 'tj', password: 'password' }
+  tj: { name: 'jp', password: 'PassWord' }
 };
 
 function authenticate(name, pass, fn) {
@@ -64,7 +64,7 @@ app.get('/restricted', function (req, res, next) {
     res.redirect('/login');
   }
 }, function(req, res){
-  res.send('로그인 성공! <a href="/logout">로그아웃</a>');
+  res.send('로그인 성공! <a href="/logout">로그아웃B</a>');
 });
 
 app.get('/logout', function(req, res){
@@ -85,12 +85,12 @@ app.post('/login', function (req, res, next) {
         req.session.user = user;
         req.session.success = 'username: ' + user.name
           + ' <a href="/logout">로그아웃</a>. '
-          + ' <a href="/restricted">로그인 확인</a>.';
+          + ' <a href="/restricted">로그인 확인~~</a>.';
         res.redirect('back');
       });
     } else {
-      req.session.error = '비밀번호가 틀렸습니다. 다시해봐라~ '
-        + ' (use "tj" and "foobar")';
+      req.session.error = '비밀번호가 틀렸습니다. '
+        + ' (use "jp" and "PassWord")';
       res.redirect('/login');
     }
   });
