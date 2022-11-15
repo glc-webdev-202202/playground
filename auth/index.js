@@ -40,7 +40,7 @@ app.use(function(req, res, next){
 // dummy database
 
 var users = {
-  tj: { name: 'tj', password: 'PassWord' }
+  tj: { name: 'jp', password: 'PassWord' }
 };
 
 function authenticate(name, pass, fn) {
@@ -90,7 +90,7 @@ app.post('/login', function (req, res, next) {
       });
     } else {
       req.session.error = '비밀번호가 틀렸습니다. '
-        + ' (use "tj" and "PassWord")';
+        + ' (use "jp" and "PassWord")';
       res.redirect('/login');
     }
   });
