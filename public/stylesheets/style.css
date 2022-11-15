@@ -1,12 +1,12 @@
 body {
   padding: 50px;
-  font: 49px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #181cf4;
+  color: pink;
 }
 
 p {
-  color: rosybrown;
+  color: white;
 }
