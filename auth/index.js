@@ -64,7 +64,7 @@ app.get('/restricted', function (req, res, next) {
     res.redirect('/login');
   }
 }, function(req, res){
-  res.send('로그인 성공! <a href="/logout">로그아웃</a>');
+  res.send('로그인 성공! <a href="/logout">로그아웃b</a>');
 });
 
 app.get('/logout', function(req, res){
