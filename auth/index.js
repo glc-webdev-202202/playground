@@ -60,7 +60,7 @@ app.get('/restricted', function (req, res, next) {
   if (req.session.user) {
     next();
   } else {
-    req.session.error = '접근 금지!';
+    req.session.error = '접근 금지입니다!';
     res.redirect('/login');
   }
 }, function(req, res){
