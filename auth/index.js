@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: TRUE }))
 app.use(session({
   resave: false,
   saveUninitialized: false,
-  secret: 'A Secret Keep it Secret'
+  secret: 'A Secret! Keep it Secret!'
 }));
 
 // Session-persisted message middleware
