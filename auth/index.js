@@ -85,7 +85,7 @@ app.post('/login', function (req, res, next) {
         req.session.user = user;
         req.session.success = 'username: ' + user.name
           + ' <a href="/logout">로그아웃</a>. '
-          + ' <a href="/restricted">로그인 확인</a>.';
+          + ' <a href="/restricted">로그인 확인~~</a>.';
         res.redirect('back');
       });
     } else {
