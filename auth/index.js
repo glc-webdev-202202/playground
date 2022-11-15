@@ -40,7 +40,7 @@ app.use(function(req, res, next){
 // dummy database
 
 var users = {
-  tj: { name: 'tj', password: 'password' }
+  tj: { name: 'tj', password: 'nametj' }
 };
 
 function authenticate(name, pass, fn) {
