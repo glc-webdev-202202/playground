@@ -1,8 +1,16 @@
 body {
   padding: 50px;
-  font: 49px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
+<<<<<<< HEAD
   color: rgb(169, 242, 205);
+=======
+  color: #7ddf6e;
+>>>>>>> 40821393e3cfd84579ff1b6ac7aaaa9ed25a92c3
+}
+
+p {
+  color: white;
 }
