@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(session({
   resave: false,
   saveUninitialized: false,
-  secret: 'asdf!@#$qwer'
+  secret: 'A Secret Keep it Secret'
 }));
 
 // Session-persisted message middleware
@@ -40,7 +40,7 @@ app.use(function(req, res, next){
 // dummy database
 
 var users = {
-  tj: { name: 'tj', password: 'foobar' }
+  tj: { name: 'tj', password: 'PassWord' }
 };
 
 function authenticate(name, pass, fn) {
@@ -90,7 +90,7 @@ app.post('/login', function (req, res, next) {
       });
     } else {
       req.session.error = '비밀번호가 틀렸습니다. '
-        + ' (use "tj" and "foobar")';
+        + ' (use "tj" and "PassWord")';
       res.redirect('/login');
     }
   });
